@@ -1,0 +1,32 @@
+p {
+    color: deeppink;
+    text-shadow: 1px 1px 2px aquamarine;
+}
+
+dt {
+    text-shadow: aquamarine;
+}
+
+.heading {
+    font-family: Helvetica;
+    font-size: 30px;
+}
+
+.my_class {
+    color: lightskyblue;
+    text-shadow: 1px 1px 2px black;
+}
+
+.heading .my_class {
+
+}
+
+#title-form {
+    color: darkcyan;
+    border: 2px solid red;
+}
+
+#text-form {
+    padding: 10px;
+    border: 2px solid green;
+}

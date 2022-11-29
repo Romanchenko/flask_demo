@@ -1,0 +1,31 @@
+<!doctype html>
+<head>
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+</head>
+<title>Twitter</title>
+
+<div class=page>
+<h1 class='my_class heading'>Twitter</h1>
+<p>The cooler twitter</p>
+    <img width="100" src="{{ url_for('send_pic') }}">
+
+<div class=metanav>
+
+{% if not session.logged_in %}
+    <a href="{{ url_for('login') }}">log in</a> {% else %}
+    <a href="{{ url_for('logout') }}">log out</a> {% endif %}
+
+</div>
+
+<img src="{{ url_for('static', filename='meme.jpg') }}">
+
+{% for message in get_flashed_messages() %}
+    <div class=flash>{{ message }}</div>
+{% endfor %}
+
+{% block body %}{% endblock %}
+
+</div>
+
+{% block body2 %}{% endblock %}
+<link rel="stylesheet" type="text/css" href="static/style.css">
